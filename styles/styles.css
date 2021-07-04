@@ -1,1 +1,37 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+button,
+label {
+  font-size: 1.6rem;
+}
+
+header {
+  height: 10vh;
+}
+
+main {
+  height: 90vh;
+}
+
+.logo {
+  padding: 2rem 2rem;
+  margin: auto;
+}
+
+main {
+  display: grid;
+}
+/*# sourceMappingURL=styles.css.map */
