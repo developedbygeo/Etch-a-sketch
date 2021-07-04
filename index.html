@@ -1,75 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <linko
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="./icons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="./icons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="./icons/favicon-16x16.png"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-        <link rel="stylesheet" href="./styles/style.css" />
-        <title>Etch-A-Sketch | Online</title>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="" alt="Etch-A-Sketch-logo">      
-    </div>
-  </header>
-<main>
-  <section class="controls">
-    <div class="control-header">
-    <h1>Toggle pen by clicking inside the grid</h1>
-  </div>
-  <div class="control-buttons">
-    <button class="clear"></button>
-    <button class="new"></button>
-  </div>
-  <div class="range-selector-control">
-    <input type="range" min='1' max='100' value='50' name="range-selector" id="range-selector">
-    <label for="range-selector">Select grid size and click New Game</label>
-  </div>
-  <div class="radio-buttons">
-  <input type="radio" name="gray-color" id="gray-color">
-  <label for="gray-color">Gray</label>
-  <input type="radio" name="random-color-1" id="random-color-1">
-  <label for="random-color-1">Random Color 1</label>
-  <input type="radio" name="random-color-2" id="random-color-2">
-  <label for="random-color-2">Random Color 2</label>
-  <input type="radio" name="custom-color" id="custom-color">
-  <label for="custom-color">Custom Color</label>
-</div>
-  </section>
-<section class="grid">
-  <div class="grid"></div>
-</section>
-</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./icons/apple-icon-114x114.png"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Etch-A-Sketch | Online</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./img/logo.png" alt="Etch-A-Sketch-logo" />
+      </div>
+    </header>
+    <main>
+      <section class="controls">
+        <div class="control-header">
+          <h1>Toggle pen by clicking inside the grid</h1>
+        </div>
+        <div class="control-buttons">
+          <button class="clear">Clear</button>
+          <button class="new">New Game</button>
+        </div>
+        <div class="range-selector-control">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            name="range-selector"
+            id="range-selector"
+          />
+          <label for="range-selector"
+            >Select grid size and click New Game</label
+          >
+        </div>
+        <div class="radio-buttons">
+          <input type="radio" name="gray-color" id="gray-color" />
+          <label for="gray-color">Gray</label>
+          <input type="radio" name="random-color-1" id="random-color-1" />
+          <label for="random-color-1">Random Color 1</label>
+          <input type="radio" name="random-color-2" id="random-color-2" />
+          <label for="random-color-2">Random Color 2</label>
+          <input type="radio" name="custom-color" id="custom-color" />
+          <!-- TODO on click 'custom-color', add 'input type='color' -->
+          <label for="custom-color">Custom Color</label>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="grid"></div>
+      </section>
+    </main>
+  </body>
 </html>
