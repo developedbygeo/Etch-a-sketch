@@ -67,37 +67,40 @@
           <h1>Toggle pen by clicking inside the grid</h1>
         </div>
         <div class="control-buttons">
+          <div class="range">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              name="range-selector"
+              id="range-selector"
+            />
+            <label for="range-selector"
+              >Select grid size and click New Game</label
+            >
+          </div>
           <button class="clear">Clear</button>
           <button class="new">New Game</button>
         </div>
-        <div class="range-selector-control">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            name="range-selector"
-            id="range-selector"
-          />
-          <label for="range-selector"
-            >Select grid size and click New Game</label
-          >
-        </div>
-        <div class="radio-buttons">
-          <input type="radio" name="gray-color" id="gray-color" />
-          <label for="gray-color">Gray</label>
-          <input type="radio" name="random-color-1" id="random-color-1" />
-          <label for="random-color-1">Random Color 1</label>
-          <input type="radio" name="random-color-2" id="random-color-2" />
-          <label for="random-color-2">Random Color 2</label>
-          <input type="radio" name="custom-color" id="custom-color" />
-          <!-- TODO on click 'custom-color', add 'input type='color' -->
-          <label for="custom-color">Custom Color</label>
+        <div class="selection-buttons">
+          <div class="blue-selection">
+            <button class="blue-color selection">Blue</button>
+          </div>
+          <div class="black-selection">
+            <button class="black-color selection">Black</button>
+          </div>
+          <div class="random-selection">
+            <button class="random-color selection">Random</button>
+          </div>
+          <div class="custom-color-selection">
+            <button class="custom-color selection">Custom</button>
+            <!-- TODO on click 'custom-color', add 'input type='color' -->
+          </div>
         </div>
       </section>
-      <section class="grid">
-        <div class="grid"></div>
-      </section>
+      <section class="grid"></section>
     </main>
+    <script defer src="./app.js"></script>
   </body>
 </html>
