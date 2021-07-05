@@ -1,2 +1,10 @@
 $blue-color: #2286cf;
 $alice: #edf6f9;
+$standard-border: 1px solid $blue-color;
+
+@mixin flex($justify, $align, $dir) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+}

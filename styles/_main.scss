@@ -10,4 +10,108 @@ main {
 }
 main {
   display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+.controls {
+  @include flex(flex-start, flex-start, column);
+  div {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+.control-buttons,
+.selection-buttons {
+  flex: 1 1 30rem;
+}
+.range {
+  @include flex(center, center, column);
+  flex: 1 1 20rem;
+}
+
+.control-header {
+  color: $blue-color;
+  flex: 1 1 10rem;
+  @include flex(center, center, row);
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.control-buttons {
+  @include flex(center, center, column-reverse);
+  button {
+    width: 50%;
+    margin-bottom: 2rem;
+    padding: 1.5rem 6rem;
+    border: $standard-border;
+    font-size: 1.6rem;
+    transition: all 200ms ease;
+  }
+  button:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  }
+  input {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+.selection-buttons {
+  @include flex(center, center, column);
+  text-align: center;
+}
+.selection {
+  width: 50%;
+  margin-bottom: 2rem;
+  padding: 1.5rem 6rem;
+  font-size: 1.6rem;
+  transition: all 200ms ease;
+  text-align: center;
+}
+.selection:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+}
+.selection:focus {
+  transform: scale(1.05);
+  -webkit-box-shadow: inset 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 4px 2px 8px 1px rgba(0, 0, 0, 0.35);
+}
+
+.blue-color {
+  border: $standard-border;
+}
+.black-color {
+  border: 1px solid rgb(24, 24, 24);
+}
+.random-color {
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2286cf 25%,
+    #f7cb15 50%,
+    #f7a1c4 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+}
+.custom-color {
+  border: none;
+  border-block-width: 20%;
+  border-top: $standard-border;
+  border-bottom: $standard-border;
+  border-left: 1px solid #a8dadc;
+  border-right: 1px solid #a8dadc;
+}
+.grid {
+  margin: 2%;
+  display: grid;
+  grid-template-columns: repeat(50, minmax(3rem, 1fr));
+  grid-template-rows: repeat(50, 1fr);
+  border: $standard-border;
+  border-radius: 0.5rem;
 }
