@@ -1,31 +1,43 @@
 header {
   height: 10vh;
 }
-main {
-  height: 90vh;
-}
 .logo {
-  padding: 2rem 2rem;
-  margin: auto;
-}
-main {
-  display: grid;
-  grid-template-columns: 0.2fr 1fr;
-}
-.controls {
-  @include flex(flex-start, flex-start, column);
-  div {
-    width: 100%;
-    margin-bottom: 3rem;
+  margin: 1%;
+  img {
+    height: 6rem;
+    width: 24%;
   }
 }
-.control-buttons,
-.selection-buttons {
-  flex: 1 1 30rem;
+main {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 3fr 0.5fr;
+  grid-template-areas:
+    "grid"
+    "controls";
+}
+.controls {
+  display: grid;
+  grid-template-rows: 0.3fr 2fr;
+  grid-template-columns: repeat(5, 1fr);
+}
+.control-header {
+  grid-area: 1/1/1/6;
 }
 .range {
+  grid-area: 2/3/2/4;
+}
+.control-buttons {
+  // grid-area: ctrl-buttons;
+  grid-area: 2/1/2/3;
+}
+.selection-buttons {
+  grid-area: 2/4/2/6;
+}
+
+.range {
   @include flex(center, center, column);
-  flex: 1 1 20rem;
+  // flex: 1 1 20rem;
 }
 
 .control-header {
@@ -39,9 +51,9 @@ main {
 }
 
 .control-buttons {
-  @include flex(center, center, column-reverse);
+  @include flex(space-evenly, center, row);
   button {
-    width: 50%;
+    width: 25%;
     margin-bottom: 2rem;
     padding: 1.5rem 6rem;
     border: $standard-border;
@@ -55,15 +67,14 @@ main {
   }
   input {
     width: 50%;
-    padding: 2rem;
   }
 }
 .selection-buttons {
-  @include flex(center, center, column);
+  @include flex(space-evenly, center, row);
   text-align: center;
 }
 .selection {
-  width: 50%;
+  width: 100%;
   margin-bottom: 2rem;
   padding: 1.5rem 6rem;
   font-size: 1.6rem;
@@ -107,11 +118,32 @@ main {
   border-left: 1px solid #a8dadc;
   border-right: 1px solid #a8dadc;
 }
+.random-selection,
+.custom-selection {
+  position: relative;
+}
+
+#random-color-visual,
+#custom-color-visual {
+  position: absolute;
+  top: 14%;
+  left: 83%;
+  width: 7%;
+}
+
+.visual-display {
+  display: none;
+}
+
 .grid {
-  margin: 2%;
+  grid-area: grid;
+  margin: 1%;
   display: grid;
   grid-template-columns: repeat(50, minmax(3rem, 1fr));
   grid-template-rows: repeat(50, 1fr);
   border: $standard-border;
   border-radius: 0.5rem;
+}
+.current-range {
+  margin-bottom: 2rem;
 }
