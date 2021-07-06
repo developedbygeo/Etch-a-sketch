@@ -67,21 +67,20 @@
           <h1>Toggle pen by clicking inside the grid</h1>
         </div>
         <div class="control-buttons">
-          <div class="range">
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              name="range-selector"
-              id="range-selector"
-            />
-            <label for="range-selector"
-              >Select grid size and click New Game</label
-            >
-          </div>
           <button class="clear">Clear</button>
           <button class="new">New Game</button>
+        </div>
+        <div class="range">
+          <input
+            type="range"
+            min="10"
+            max="64"
+            value="32"
+            name="range-selector"
+            id="range-selector"
+          />
+          <p class="current-range"></p>
+          <label for="range-selector">Select grid size (px)</label>
         </div>
         <div class="selection-buttons">
           <div class="blue-selection">
@@ -92,10 +91,29 @@
           </div>
           <div class="random-selection">
             <button class="random-color selection">Random</button>
+            <!-- <div class="random-color-visual"> -->
+            <input
+              type="color"
+              name="random-color-visual"
+              id="random-color-visual"
+              class="random-color-visual visual-display"
+            />
+            <!-- </div> -->
           </div>
-          <div class="custom-color-selection">
+          <div class="custom-selection">
             <button class="custom-color selection">Custom</button>
+            <!-- <div class="custom-color-visual"> -->
+            <input
+              type="color"
+              name="custom-color-visual"
+              id="custom-color-visual"
+              class="custom-color-visual visual-display"
+            />
+            <!-- </div> -->
             <!-- TODO on click 'custom-color', add 'input type='color' -->
+          </div>
+          <div class="eraser">
+            <button class="eraser selection">Eraser</button>
           </div>
         </div>
       </section>
