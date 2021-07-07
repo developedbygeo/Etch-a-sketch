@@ -137,13 +137,27 @@ main {
 
 .grid {
   grid-area: grid;
-  margin: 1%;
+  width: 40%;
+  height: 95%;
   display: grid;
-  grid-template-columns: repeat(50, minmax(3rem, 1fr));
-  grid-template-rows: repeat(50, 1fr);
+  justify-self: center;
+  // grid-template-columns: repeat(10, minmax(3rem, 1fr));
+  // grid-template-rows: repeat(10, 1fr);
   border: $standard-border;
   border-radius: 0.5rem;
 }
 .current-range {
   margin-bottom: 2rem;
+}
+
+// Grid Classes
+.grid-row {
+  display: block;
+  width: 100%;
+  font-size: 0;
+}
+.grid-box {
+  background: transparent;
+  border: "1px solid #e5e5e5";
+  display: inline-block;
 }
