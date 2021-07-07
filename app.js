@@ -3,7 +3,9 @@ const clearButton = document.querySelector(".clear");
 const colorButtonsAll = document.querySelectorAll(".selection");
 const canvasSizeSelector = document.querySelector("#range-selector");
 const canvas = document.querySelector(".grid");
+const maximumGridSize = 662.8;
 let color;
+let requestedGridSize = 16;
 
 clearButton.addEventListener("click", () => {});
 
@@ -16,34 +18,11 @@ canvasSizeSelector.addEventListener("change", () => {
 
 // Functions
 
-function coloringDivs(el) {
-  console.log(el);
-  el.style.background = color;
-}
+// function coloringDivs(el) {
+//   console.log(el);
+//   el.style.background = color;
+// }
 
-// to create the grid area and initiate coloring
-function createGrid(columns, rows) {
-  canvas.style.gridTemplateColumns = `repeat(${columns}, minmax(1rem, 1fr))`;
-  canvas.style.gridTemplateRows = `repeat(${rows}, minmax(1rem, 1fr))`;
-  console.log(canvas);
-  for (i = 0; i < columns * rows; i++) {
-    // !!! TEST
-    let containerCell = document.createElement("div");
-    containerCell.setAttribute("draggable", "false");
-    containerCell.style.border = "1px solid #e5e5e5";
-    canvas.appendChild(containerCell).className = "grid-cell";
-
-    // !!! TEST
-    containerCell.addEventListener("mouseover", (e) => {
-      let containercell;
-      // containerCell.style.background = color;
-      e.preventDefault();
-      e.target.style.background = color;
-    });
-    // to pause coloring
-    // containerCell.addEventListener('click', ()=>{})
-  }
-}
 // to provide the selected color
 function selectColor() {
   colorButtonsAll.forEach((button) => {
@@ -69,5 +48,56 @@ function selectColor() {
     });
   });
 }
+
+function coloringDivs(e) {
+  let selectedColor = color;
+  e.target.style.backgroundColor = selectedColor;
+}
+
+function createGrid() {
+  for (let i = 0; i < requestedGridSize; i++) {
+    let gridRow = document.createElement("div");
+    gridRow.className = "grid-row";
+    for (let u = 0; u < requestedGridSize; u++) {
+      let gridBox = document.createElement("div");
+      gridBox.className = "grid-box";
+      gridRow.append(gridBox);
+    }
+    canvas.appendChild(gridRow);
+    selectColor();
+    canvas.addEventListener("mouseover", coloringDivs);
+    const allGridBoxes = document.querySelectorAll(".grid-box");
+    for (y = 0; y < allGridBoxes.length; y++) {
+      allGridBoxes[y].style.width = maximumGridSize / requestedGridSize + "px";
+      allGridBoxes[y].style.height = maximumGridSize / requestedGridSize + "px";
+    }
+  }
+}
+// // to create the grid area and initiate coloring
+// function createGrid(columns, rows) {
+//   canvas.style.gridTemplateColumns = `repeat(${columns}, minmax(1rem, 1fr))`;
+//   canvas.style.gridTemplateRows = `repeat(${rows}, minmax(1rem, 1fr))`;
+//   console.log(canvas);
+//   for (i = 0; i < columns * rows; i++) {
+//     // !!! TEST
+//     let containerCell = document.createElement("div");
+//     containerCell.setAttribute("draggable", "false");
+//     containerCell.style.border = "1px solid #e5e5e5";
+//     canvas.appendChild(containerCell).className = "grid-cell";
+
+//     // !!! TEST
+//     containerCell.addEventListener("mouseover", (e) => {
+//       let containercell;
+//       containerCell.style.background = color;
+//       // e.preventDefault();
+//       // e.target.style.background = color;
+//     });
+//     // to pause coloring
+//     // containerCell.addEventListener('click', ()=>{})
+//   }
+// }
+
 // to use the selected color
-selectColor();
+// selectColor();
+
+createGrid();
