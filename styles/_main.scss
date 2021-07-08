@@ -28,8 +28,11 @@ main {
   grid-area: 2/3/2/4;
 }
 .control-buttons {
-  // grid-area: ctrl-buttons;
   grid-area: 2/1/2/3;
+}
+.clear,
+.new {
+  border-radius: 0.5rem;
 }
 .selection-buttons {
   grid-area: 2/4/2/6;
@@ -76,10 +79,11 @@ main {
 .selection {
   width: 100%;
   margin-bottom: 2rem;
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 4rem;
   font-size: 1.6rem;
   transition: all 200ms ease;
   text-align: center;
+  border-radius: 0.5rem;
 }
 .selection:hover {
   transform: scale(1.1);
@@ -137,27 +141,33 @@ main {
 
 .grid {
   grid-area: grid;
-  width: 40%;
-  height: 95%;
-  display: grid;
-  justify-self: center;
+  @include flex(center, center, row);
+  // width: 60rem;
+  // height: 60rem;
+  // width: 40%;
+  // height: 95%;
+  // justify-self: center;
   // grid-template-columns: repeat(10, minmax(3rem, 1fr));
   // grid-template-rows: repeat(10, 1fr);
+  // border: $standard-border;
+  // border-radius: 0.5rem;
+}
+.grid-container {
   border: $standard-border;
   border-radius: 0.5rem;
+  height: 90%;
+  display: grid;
+  width: 80vw;
 }
 .current-range {
   margin-bottom: 2rem;
 }
 
-// Grid Classes
-.grid-row {
-  display: block;
-  width: 100%;
-  font-size: 0;
-}
 .grid-box {
   background: transparent;
-  border: "1px solid #e5e5e5";
-  display: inline-block;
+  // border: 1px solid #e5e5e5;
+  border: none;
+  // border: 1px solid #8a8888;
+  height: 100%;
+  transition: all 200ms ease;
 }
