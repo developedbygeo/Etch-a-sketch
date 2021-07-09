@@ -3,13 +3,16 @@ const clearButton = document.querySelector(".clear");
 const colorButtonsAll = document.querySelectorAll(".selection");
 const canvasSizeSelector = document.querySelector("#range-selector");
 const canvas = document.querySelector(".grid-container");
+let allGridCells;
 let maximumGridSize;
 let color;
 let requestedGridSize = 16;
 
-window.addEventListener("load", createGrid);
+window.addEventListener("load", gameInit);
 
-clearButton.addEventListener("click", () => {});
+clearButton.addEventListener("click", clearGridColor);
+
+newGameButton.addEventListener("click", gameInit);
 
 canvasSizeSelector.addEventListener("change", () => {
   requestedGridSize = canvasSizeSelector.value;
@@ -19,13 +22,8 @@ canvasSizeSelector.addEventListener("change", () => {
   clearGrid();
   createGrid();
 });
+
 // Functions
-
-// function coloringDivs(el) {
-//   console.log(el);
-//   el.style.background = color;
-// }
-
 function createGrid() {
   // 50 vw for div
   maximumGridSize = 0.8 * window.innerWidth;
@@ -37,12 +35,6 @@ function createGrid() {
     canvas.style.gridTemplateRows = `repeat(${requestedGridSize}, 1fr)`;
     canvas.appendChild(gridCell);
   }
-  allGridCells = document.querySelectorAll(".grid-box");
-  allGridCells.forEach((cell) =>
-    cell.addEventListener("mousemove", coloringDivs)
-  );
-
-  selectColor();
 }
 
 function clearGrid() {
@@ -50,9 +42,16 @@ function clearGrid() {
   canvas.style.gridTemplateColumns = "";
   canvas.style.gridTemplateRows = "";
 }
+function clearGridColor() {
+  allGridCells = document.querySelectorAll(".grid-box");
+  allGridCells.forEach((cell) => {
+    cell.style.background = "transparent";
+  });
+}
 
 // to provide the selected color
 function selectColor() {
+  color = "black";
   colorButtonsAll.forEach((button) => {
     button.addEventListener("click", (e) => {
       let colorVisualDisplay = button.nextElementSibling;
@@ -76,8 +75,21 @@ function selectColor() {
     });
   });
 }
-
+// to color the divs with the color from selectColor
 function coloringDivs(e) {
   let selectedColor = color;
   e.target.style.backgroundColor = selectedColor;
+}
+// to add evtlisteners to the grid-boxes
+function coloringProcess() {
+  allGridCells = document.querySelectorAll(".grid-box");
+  allGridCells.forEach((cell) =>
+    cell.addEventListener("mouseover", coloringDivs)
+  );
+}
+function gameInit() {
+  clearGrid();
+  createGrid();
+  selectColor();
+  coloringProcess();
 }
