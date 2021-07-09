@@ -208,6 +208,6 @@ main {
   background: transparent;
   border: none;
   height: 100%;
-  transition: all 200ms ease;
+  transition: all ease;
 }
 /*# sourceMappingURL=styles.css.map */

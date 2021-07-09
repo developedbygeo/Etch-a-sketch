@@ -142,15 +142,6 @@ main {
 .grid {
   grid-area: grid;
   @include flex(center, center, row);
-  // width: 60rem;
-  // height: 60rem;
-  // width: 40%;
-  // height: 95%;
-  // justify-self: center;
-  // grid-template-columns: repeat(10, minmax(3rem, 1fr));
-  // grid-template-rows: repeat(10, 1fr);
-  // border: $standard-border;
-  // border-radius: 0.5rem;
 }
 .grid-container {
   border: $standard-border;
@@ -165,9 +156,7 @@ main {
 
 .grid-box {
   background: transparent;
-  // border: 1px solid #e5e5e5;
   border: none;
-  // border: 1px solid #8a8888;
   height: 100%;
-  transition: all 200ms ease;
+  transition: all ease;
 }
