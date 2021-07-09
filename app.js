@@ -19,8 +19,7 @@ canvasSizeSelector.addEventListener("change", () => {
   const sizeIndicator = document.querySelector(".current-range");
   sizeIndicator.innerText = requestedGridSize;
   // createGrid(requestedGridSize);
-  clearGrid();
-  createGrid();
+  gameInit();
 });
 
 // Functions
