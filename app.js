@@ -80,10 +80,14 @@ function coloringDivs(e) {
   e.target.style.backgroundColor = selectedColor;
 }
 // to add evtlisteners to the grid-boxes
+
 function coloringProcess() {
   allGridCells = document.querySelectorAll(".grid-box");
   allGridCells.forEach((cell) =>
-    cell.addEventListener("mouseover", coloringDivs)
+    cell.addEventListener("mouseenter", coloringDivs)
+  );
+  allGridCells.forEach((cell) =>
+    cell.addEventListener("touchstart", coloringDivs)
   );
 }
 function gameInit() {
