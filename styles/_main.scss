@@ -5,13 +5,13 @@ header {
   margin: 1%;
   img {
     height: 6rem;
-    width: 24%;
+    width: 30%;
   }
 }
 main {
   height: 90vh;
   display: grid;
-  grid-template-rows: 3fr 0.5fr;
+  grid-template-rows: 2.5fr 0.5fr;
   grid-template-areas:
     "grid"
     "controls";
@@ -20,6 +20,7 @@ main {
   display: grid;
   grid-template-rows: 0.3fr 2fr;
   grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 1.5rem;
 }
 .control-header {
   grid-area: 1/1/1/6;
@@ -57,7 +58,6 @@ main {
   @include flex(space-evenly, center, row);
   button {
     width: 25%;
-    margin-bottom: 2rem;
     padding: 1.5rem 6rem;
     border: $standard-border;
     font-size: 1.6rem;

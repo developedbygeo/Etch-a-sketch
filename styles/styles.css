@@ -9,8 +9,9 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+html,
 body {
-  background: #f0f0f0;
+  overflow: auto;
 }
 
 h1 {
@@ -33,13 +34,13 @@ header {
 
 .logo img {
   height: 6rem;
-  width: 24%;
+  width: 30%;
 }
 
 main {
   height: 90vh;
   display: grid;
-  grid-template-rows: 3fr 0.5fr;
+  grid-template-rows: 2.5fr 0.5fr;
   grid-template-areas: "grid" "controls";
 }
 
@@ -47,6 +48,7 @@ main {
   display: grid;
   grid-template-rows: 0.3fr 2fr;
   grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 1.5rem;
 }
 
 .control-header {
@@ -100,7 +102,6 @@ main {
 
 .control-buttons button {
   width: 25%;
-  margin-bottom: 2rem;
   padding: 1.5rem 6rem;
   border: 1px solid #2286cf;
   font-size: 1.6rem;
