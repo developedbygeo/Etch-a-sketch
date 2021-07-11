@@ -3,6 +3,7 @@ const clearButton = document.querySelector(".clear");
 const colorButtonsAll = document.querySelectorAll(".selection");
 const canvasSizeSelector = document.querySelector("#range-selector");
 const canvas = document.querySelector(".grid-container");
+const sizeIndicator = document.querySelector(".current-range");
 let allGridCells;
 let maximumGridSize;
 let color;
@@ -12,13 +13,15 @@ window.addEventListener("load", gameInit);
 
 clearButton.addEventListener("click", clearGridColor);
 
-newGameButton.addEventListener("click", gameInit);
+newGameButton.addEventListener("click", () => {
+  canvasSizeSelector.value = "16";
+  sizeIndicator.innerText = 16;
+  gameInit();
+});
 
 canvasSizeSelector.addEventListener("change", () => {
   requestedGridSize = canvasSizeSelector.value;
-  const sizeIndicator = document.querySelector(".current-range");
   sizeIndicator.innerText = requestedGridSize;
-  // createGrid(requestedGridSize);
   gameInit();
 });
 
@@ -79,8 +82,7 @@ function coloringDivs(e) {
   let selectedColor = color;
   e.target.style.backgroundColor = selectedColor;
 }
-// to add evtlisteners to the grid-boxes
-
+// to add eventListeners to the grid-boxes
 function coloringProcess() {
   allGridCells = document.querySelectorAll(".grid-box");
   allGridCells.forEach((cell) =>
@@ -90,6 +92,7 @@ function coloringProcess() {
     cell.addEventListener("touchstart", coloringDivs)
   );
 }
+
 function gameInit() {
   clearGrid();
   createGrid();
