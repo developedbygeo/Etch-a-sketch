@@ -59,10 +59,6 @@ main {
   grid-area: 2/3/2/4;
 }
 
-.control-buttons {
-  grid-area: 2/1/2/3;
-}
-
 .clear,
 .new {
   border-radius: 0.5rem;
@@ -94,6 +90,7 @@ main {
 }
 
 .control-buttons {
+  grid-area: 2/1/2/3;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -101,7 +98,7 @@ main {
 }
 
 .control-buttons button {
-  width: 25%;
+  width: 100%;
   padding: 1.5rem 6rem;
   border: 1px solid #2286cf;
   font-size: 1.6rem;
@@ -127,12 +124,19 @@ main {
 
 .selection {
   width: 100%;
-  margin-bottom: 2rem;
   padding: 1.5rem 4rem;
   font-size: 1.6rem;
   transition: all 200ms ease;
   text-align: center;
   border-radius: 0.5rem;
+}
+
+.blue-selection,
+.black-selection,
+.random-selection,
+.custom-selection {
+  flex: 1;
+  margin-right: 1rem;
 }
 
 .selection:hover {
@@ -176,9 +180,12 @@ main {
 #random-color-visual,
 #custom-color-visual {
   position: absolute;
-  top: 14%;
+  top: 31%;
   left: 83%;
   width: 7%;
+  border: none;
+  height: 2rem;
+  width: 2rem;
 }
 
 .visual-display {
