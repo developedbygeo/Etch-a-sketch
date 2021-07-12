@@ -73,7 +73,6 @@ main {
 .selection-buttons {
   @include flex(space-evenly, center, row);
   text-align: center;
-  // margin-bottom: 2rem;
 }
 .selection {
   width: 100%;
@@ -124,7 +123,7 @@ main {
   border-block-width: 20%;
   border-top: $standard-border;
   border-bottom: $standard-border;
-  border-left: 1px solid #a8dadc;
+  border-left: 1px solid #979e9e;
   border-right: 1px solid #a8dadc;
 }
 .random-selection,
