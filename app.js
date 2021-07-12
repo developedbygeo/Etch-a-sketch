@@ -4,6 +4,7 @@ const colorButtonsAll = document.querySelectorAll(".selection");
 const canvasSizeSelector = document.querySelector("#range-selector");
 const canvas = document.querySelector(".grid-container");
 const sizeIndicator = document.querySelector(".current-range");
+const eraser = document.querySelector(".eraser-button");
 let allGridCells;
 let maximumGridSize;
 let color;
@@ -24,6 +25,8 @@ canvasSizeSelector.addEventListener("change", () => {
   sizeIndicator.innerText = requestedGridSize;
   gameInit();
 });
+
+eraser.addEventListener("click", erase);
 
 // Functions
 function createGrid() {
@@ -66,9 +69,10 @@ function selectColor() {
         color = `#${customColor}`;
         colorVisualDisplay.value = color;
       } else if (button == customColorButton) {
+        color = colorVisualDisplay.value;
         colorVisualDisplay.classList.remove("visual-display");
         colorVisualDisplay.click();
-        colorVisualDisplay.addEventListener("change", () => {
+        colorVisualDisplay.addEventListener("input", () => {
           color = colorVisualDisplay.value;
         });
       } else {
@@ -90,6 +94,14 @@ function coloringProcess() {
   );
   allGridCells.forEach((cell) =>
     cell.addEventListener("touchstart", coloringDivs)
+  );
+}
+function erase() {
+  allGridCells = document.querySelectorAll(".grid-box");
+  allGridCells.forEach((cell) =>
+    cell.addEventListener("mouseover", () => {
+      cell.style.background = "";
+    })
   );
 }
 
