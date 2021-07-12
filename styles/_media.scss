@@ -1,0 +1,91 @@
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  html {
+    font-size: 50%;
+  }
+  main {
+    height: 89vh;
+  }
+  .logo {
+    text-align: center;
+    img {
+      height: 5rem;
+      width: 90%;
+    }
+  }
+  .grid-container {
+    width: 95%;
+  }
+  .controls {
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 2rem;
+  }
+  .control-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 2/1/2/2;
+    button {
+      padding: 1rem 3rem;
+      font-size: 1.3rem;
+    }
+  }
+  .range {
+    position: relative;
+    grid-area: 2/3/2/2;
+    text-align: center;
+    flex-direction: row-reverse;
+    input {
+      width: 15rem;
+    }
+    p {
+      margin: 0;
+    }
+    label {
+      margin-right: 2rem;
+    }
+  }
+  .current-range {
+    margin: 0;
+  }
+  .selection-buttons {
+    gap: 1rem;
+    grid-area: 2/2/2/6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .blue-selection,
+  .black-selection,
+  .random-selection,
+  .custom-selection,
+  .eraser {
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .blue-selection {
+    grid-area: 1/1/1/2;
+  }
+  .eraser {
+    grid-area: 3/1/3/3;
+    margin-right: 1rem;
+  }
+  .control-header {
+    display: none;
+  }
+  .range {
+    grid-area: 1/1/1/4;
+    width: 100vw;
+    justify-content: space-evenly;
+    p {
+      order: -1;
+      font-size: 1.3;
+    }
+    label {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+  }
+}
+// TODO add media queries for MDPI/HiDPI screens & tablets
