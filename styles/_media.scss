@@ -1,7 +1,4 @@
 @media screen and (min-width: 200px) and (max-width: 2000px) {
-  html {
-    font-size: 60%;
-  }
   main {
     height: 89vh;
   }
@@ -94,7 +91,26 @@
 }
 @media screen and (max-width: 280px) {
   html {
-    font-size: 46%;
+    font-size: 42%;
+  }
+  .selection {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 335px) {
+  html {
+    font-size: 44%;
+  }
+  .selection {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 335px) and (max-width: 410px) {
+  html {
+    font-size: 49.5%;
+  }
+  .selection {
+    width: 70%;
   }
 }
 @media screen and (max-width: 310px) {
