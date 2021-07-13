@@ -1,8 +1,9 @@
 header {
-  height: 10vh;
+  height: 7vh;
 }
 .logo {
-  margin: 1%;
+  margin-top: 1%;
+  @include flex(center, center, row);
   img {
     height: 6rem;
     width: 30%;
@@ -19,8 +20,9 @@ main {
 .controls {
   display: grid;
   grid-template-rows: 0.3fr 2fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   margin-bottom: 1.5rem;
+  row-gap: 2rem;
 }
 .control-header {
   grid-area: 1/1/1/6;
@@ -71,6 +73,7 @@ main {
 }
 .selection-buttons {
   grid-area: 2/4/2/6;
+  margin-right: 2rem;
 }
 
 .range {
@@ -112,12 +115,12 @@ main {
   text-align: center;
 }
 .selection {
-  width: 100%;
+  width: 80%;
+  border-radius: 0.2rem;
   padding: 1.5rem 4rem;
   font-size: 1.6rem;
   transition: all 200ms ease;
   text-align: center;
-  border-radius: 0.5rem;
 }
 .blue-selection,
 .black-selection,
@@ -177,6 +180,7 @@ main {
   border: none;
   height: 2rem;
   width: 2rem;
+  background: none;
 }
 
 .visual-display {
@@ -185,7 +189,7 @@ main {
 .eraser {
   button {
     border: 2px inset #a3a4a4;
-    border-radius: 0.5rem;
+    width: 80%;
   }
 }
 

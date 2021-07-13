@@ -25,11 +25,15 @@ label {
 }
 
 header {
-  height: 10vh;
+  height: 7vh;
 }
 
 .logo {
-  margin: 1%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .logo img {
@@ -47,8 +51,9 @@ main {
 .controls {
   display: grid;
   grid-template-rows: 0.3fr 2fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   margin-bottom: 1.5rem;
+  row-gap: 2rem;
 }
 
 .control-header {
@@ -110,6 +115,7 @@ main {
 
 .selection-buttons {
   grid-area: 2/4/2/6;
+  margin-right: 2rem;
 }
 
 .range {
@@ -167,12 +173,12 @@ main {
 }
 
 .selection {
-  width: 100%;
+  width: 80%;
+  border-radius: 0.2rem;
   padding: 1.5rem 4rem;
   font-size: 1.6rem;
   transition: all 200ms ease;
   text-align: center;
-  border-radius: 0.5rem;
 }
 
 .blue-selection,
@@ -230,6 +236,7 @@ main {
   border: none;
   height: 2rem;
   width: 2rem;
+  background: none;
 }
 
 .visual-display {
@@ -238,7 +245,7 @@ main {
 
 .eraser button {
   border: 2px inset #a3a4a4;
-  border-radius: 0.5rem;
+  width: 80%;
 }
 
 .grid {
@@ -268,7 +275,7 @@ main {
   transition: all ease;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (min-width: 200px) and (max-width: 2000px) {
   html {
     font-size: 50%;
   }
@@ -280,7 +287,7 @@ main {
   }
   .logo img {
     height: 5rem;
-    width: 90%;
+    width: 50%;
   }
   .grid-container {
     width: 95%;
@@ -353,6 +360,32 @@ main {
   .range label {
     font-size: 1.3rem;
     margin: 0;
+  }
+  #random-color-visual,
+  #custom-color-visual {
+    top: 9%;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  #random-color-visual,
+  #custom-color-visual {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (min-width: 1031px) {
+  html {
+    font-size: 62.5%;
+  }
+  .logo img {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
