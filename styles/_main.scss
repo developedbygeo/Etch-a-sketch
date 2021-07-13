@@ -78,7 +78,6 @@ main {
 
 .range {
   @include flex(center, center, column);
-  // flex: 1 1 20rem;
 }
 
 .control-header {
