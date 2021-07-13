@@ -74,6 +74,7 @@ function selectColor() {
         colorVisualDisplay.click();
         colorVisualDisplay.addEventListener("input", () => {
           color = colorVisualDisplay.value;
+          customColorButton.style.border = `1px solid ${color}`;
         });
       } else {
         color = String(button.textContent.toLowerCase());
