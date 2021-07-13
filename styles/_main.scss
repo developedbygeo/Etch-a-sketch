@@ -73,7 +73,7 @@ main {
 }
 .selection-buttons {
   grid-area: 2/4/2/6;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .range {
@@ -94,6 +94,7 @@ main {
 .control-buttons {
   grid-area: 2/1/2/3;
   @include flex(space-evenly, center, row);
+  margin-left: 1rem;
   button {
     width: 100%;
     padding: 1.5rem 6rem;
@@ -189,7 +190,7 @@ main {
 .eraser {
   button {
     border: 2px inset #a3a4a4;
-    width: 80%;
+    width: 60%;
   }
 }
 
