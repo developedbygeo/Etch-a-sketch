@@ -71,10 +71,6 @@ main {
 .new {
   border-radius: 0.5rem;
 }
-.selection-buttons {
-  grid-area: 2/4/2/6;
-  margin-right: 1rem;
-}
 
 .range {
   @include flex(center, center, column);
@@ -113,6 +109,8 @@ main {
 .selection-buttons {
   @include flex(space-evenly, center, row);
   text-align: center;
+  grid-area: 2/4/2/6;
+  margin-right: 1rem;
 }
 .selection {
   width: 60%;
