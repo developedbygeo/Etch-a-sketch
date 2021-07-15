@@ -113,11 +113,6 @@ main {
   border-radius: 0.5rem;
 }
 
-.selection-buttons {
-  grid-area: 2/4/2/6;
-  margin-right: 1rem;
-}
-
 .range {
   display: flex;
   justify-content: center;
@@ -171,6 +166,8 @@ main {
   align-items: center;
   flex-direction: row;
   text-align: center;
+  grid-area: 2/4/2/6;
+  margin-right: 1rem;
 }
 
 .selection {
@@ -325,7 +322,7 @@ main {
     gap: 1rem;
     grid-area: 2/2/2/6;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 0.4fr);
     grid-template-rows: repeat(2, 1fr);
   }
   .blue-selection button,
@@ -335,6 +332,7 @@ main {
   .eraser button {
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
+    width: 100%;
   }
   .blue-selection {
     grid-area: 1/1/1/2;
@@ -349,7 +347,7 @@ main {
   .range {
     grid-area: 1/1/1/4;
     width: 100vw;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   .range p {
     order: -1;
@@ -359,9 +357,15 @@ main {
     font-size: 1.3rem;
     margin: 0;
   }
+  .range input {
+    margin-inline: 2rem;
+  }
   #random-color-visual,
   #custom-color-visual {
     top: 9%;
+    right: 0%;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
