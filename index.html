@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
@@ -67,7 +74,10 @@
       </section>
       <section class="controls">
         <div class="control-header">
-          <h1>Pick the size & favorite color and start drawing!</h1>
+          <h1>
+            Pick the size & favorite color <br />
+            and start drawing!
+          </h1>
         </div>
         <div class="control-buttons">
           <div class="button-wrapper">
@@ -99,7 +109,11 @@
             <button class="black-color selection">Black</button>
           </div>
           <div class="random-selection">
-            <button class="random-color selection">Random</button>
+            <button class="random-color selection">
+              <span class="r">R</span><span class="a">a</span
+              ><span class="n">n</span><span class="d">d</span
+              ><span class="o">o</span><span class="m">m</span>
+            </button>
             <input
               type="color"
               name="random-color-visual"
@@ -108,7 +122,9 @@
             />
           </div>
           <div class="custom-selection">
-            <button class="custom-color selection">Custom</button>
+            <button class="custom-color selection">
+              Custom<i class="fas fa-cog"></i>
+            </button>
             <input
               type="color"
               name="custom-color-visual"
