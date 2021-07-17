@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 
 p,
@@ -82,18 +82,18 @@ main {
 
 .range {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column-reverse;
   position: relative;
   grid-area: 2/2/2/5;
   text-align: center;
   width: 100%;
-  margin-top: 2.5rem;
 }
 
 .range input {
   width: 50%;
+  margin-block: 1rem;
 }
 
 .range p {
@@ -231,6 +231,7 @@ main {
 .custom-selection i {
   margin-left: 0.35rem;
   scale: 0.9;
+  pointer-events: none;
 }
 
 .blue-selection {
@@ -329,6 +330,12 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+.eraser button i {
+  margin-left: 0.35rem;
+  scale: 0.9;
+  pointer-events: none;
+}
+
 .grid {
   grid-area: grid;
   display: flex;
@@ -354,5 +361,220 @@ main {
   border: none;
   height: 100%;
   transition: all ease;
+}
+
+@media screen and (min-width: 240px) and (max-width: 1024px) {
+  main {
+    height: 89vh;
+  }
+  .logo img {
+    height: 5rem;
+    width: 50%;
+  }
+  .grid-container {
+    width: 95%;
+  }
+  .controls {
+    width: 100%;
+  }
+  .new,
+  .clear {
+    padding: 2rem;
+  }
+  .range {
+    margin: 0;
+  }
+  .range input {
+    width: 85%;
+    height: 4rem;
+  }
+  .range input::-webkit-slider-thumb {
+    height: 3rem;
+    width: 3rem;
+    background: #2286cf;
+    cursor: pointer;
+  }
+  .range input::-moz-range-thumb {
+    height: 3rem;
+    width: 3rem;
+    background: #2286cf;
+    cursor: pointer;
+  }
+  .range input::-ms-thumb {
+    height: 3rem;
+    width: 3rem;
+    background: #2286cf;
+    cursor: pointer;
+    margin: 0;
+  }
+  .range input::-webkit-slider-runnable-track {
+    height: 3rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #2286cf;
+    border-radius: 0.7rem;
+  }
+  .range input::-moz-range-track {
+    height: 3rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #2286cf;
+    border-radius: 0.7rem;
+  }
+  .range input::-ms-track {
+    height: 3rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #2286cf;
+    border-radius: 0.7rem;
+  }
+  .range p,
+  .range label {
+    font-size: 1.8rem;
+  }
+  .control-header {
+    margin-top: 3rem;
+  }
+  .control-header h1 {
+    font-size: 2.2rem;
+  }
+  #random-color-visual,
+  #custom-color-visual {
+    top: 9%;
+    width: 18%;
+  }
+  .button-wrapper {
+    width: 100%;
+  }
+  .clear {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 259px) {
+  html {
+    font-size: 21.5%;
+  }
+}
+
+@media screen and (min-width: 260px) and (max-width: 281px) {
+  html {
+    font-size: 23.5%;
+  }
+  .new,
+  .clear {
+    padding: 3rem;
+  }
+  .selection {
+    padding: 3rem 4rem;
+  }
+  .control-header h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 282px) and (max-width: 290px) {
+  html {
+    font-size: 26.5%;
+  }
+  .range input::-webkit-slider-runnable-track {
+    height: 4rem;
+  }
+  .range input::-moz-range-track {
+    height: 4rem;
+  }
+  .range input::-ms-track {
+    height: 4rem;
+  }
+}
+
+@media screen and (min-width: 291px) and (max-width: 305px) {
+  html {
+    font-size: 26.5%;
+  }
+}
+
+@media screen and (min-width: 306px) and (max-width: 346px) {
+  html {
+    font-size: 29%;
+  }
+}
+
+@media screen and (min-width: 347px) and (max-width: 386px) {
+  html {
+    font-size: 32.5%;
+  }
+}
+
+@media screen and (min-width: 387px) and (max-width: 450px) {
+  html {
+    font-size: 36.5%;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  html {
+    font-size: 43.5%;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 758px) {
+  html {
+    font-size: 50.5%;
+  }
+  .range input::-webkit-slider-runnable-track {
+    height: 2.5rem;
+  }
+  .range input::-moz-range-track {
+    height: 2.5rem;
+  }
+  .range input::-ms-track {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 834px) and (max-width: 877px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media screen and (min-width: 878px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 759px) and (max-width: 1023px) {
+  .range input::-webkit-slider-runnable-track {
+    height: 2rem;
+  }
+  .range input::-moz-range-track {
+    height: 2rem;
+  }
+  .range input::-ms-track {
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1030px) {
+  html {
+    font-size: 56.5%;
+  }
+  .range input::-webkit-slider-runnable-track {
+    height: 2rem;
+  }
+  .range input::-moz-range-track {
+    height: 2rem;
+  }
+  .range input::-ms-track {
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1031px) and (max-width: 1100px) {
+  html {
+    font-size: 55.5%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
