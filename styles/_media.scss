@@ -1,9 +1,9 @@
-@media screen and (min-width: 200px) and (max-width: 2000px) {
+@media screen and (min-width: 240px) and (max-width: 1024px) {
   main {
     height: 89vh;
   }
+
   .logo {
-    text-align: center;
     img {
       height: 5rem;
       width: 50%;
@@ -13,131 +13,204 @@
     width: 95%;
   }
   .controls {
-    grid-template-columns: 1fr 1fr 1.5fr;
-    gap: 2rem;
+    width: 100%;
   }
-  .control-buttons {
-    flex-direction: column;
-    justify-content: space-between;
-    grid-area: 2/1/2/2;
-    button {
-      padding: 1rem 5rem;
-      font-size: 1.3rem;
-    }
+  .new,
+  .clear {
+    padding: 2rem;
   }
   .range {
-    position: relative;
-    grid-area: 2/3/2/2;
-    text-align: center;
-    flex-direction: row-reverse;
+    margin: 0;
     input {
-      width: 15rem;
+      width: 85%;
+      height: 4rem;
     }
-    p {
+    input::-webkit-slider-thumb {
+      height: 3rem;
+      width: 3rem;
+      background: $blue-color;
+      cursor: pointer;
+    }
+    input::-moz-range-thumb {
+      height: 3rem;
+      width: 3rem;
+      background: $blue-color;
+      cursor: pointer;
+    }
+    input::-ms-thumb {
+      height: 3rem;
+      width: 3rem;
+      background: $blue-color;
+      cursor: pointer;
       margin: 0;
     }
+    input::-webkit-slider-runnable-track {
+      height: 3rem;
+      cursor: pointer;
+      background: transparent;
+      border: $standard-border;
+      border-radius: 0.7rem;
+    }
+    input::-moz-range-track {
+      height: 3rem;
+      cursor: pointer;
+      background: transparent;
+      border: $standard-border;
+      border-radius: 0.7rem;
+    }
+    input::-ms-track {
+      height: 3rem;
+      cursor: pointer;
+      background: transparent;
+      border: $standard-border;
+      border-radius: 0.7rem;
+    }
+    p,
     label {
-      margin-right: 2rem;
+      font-size: 1.8rem;
     }
   }
-  .current-range {
-    margin: 0;
-  }
-  .selection-buttons {
-    gap: 1rem;
-    grid-area: 2/2/2/6;
-    display: grid;
-    grid-template-columns: repeat(2, 0.4fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .blue-selection,
-  .black-selection,
-  .random-selection,
-  .custom-selection,
-  .eraser {
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1.3rem;
-      width: 100%;
+  .control-header {
+    margin-top: 3rem;
+    h1 {
+      font-size: 2.2rem;
     }
   }
 
-  .blue-selection {
-    grid-area: 1/1/1/2;
-  }
-  .eraser {
-    grid-area: 3/1/3/3;
-    margin-right: 1rem;
-  }
-  .control-header {
-    display: none;
-  }
-  .range {
-    grid-area: 1/1/1/4;
-    width: 100vw;
-    justify-content: center;
-    p {
-      order: -1;
-      font-size: 1.3;
-    }
-    label {
-      font-size: 1.3rem;
-      margin: 0;
-    }
-    input {
-      margin-inline: 2rem;
-    }
-  }
   #random-color-visual,
   #custom-color-visual {
     top: 9%;
-    right: 0%;
-    width: 1rem;
-    height: 1rem;
+    width: 18%;
+  }
+  .button-wrapper {
+    width: 100%;
+  }
+  .clear {
+    width: 100%;
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (min-width: 240px) and (max-width: 259px) {
   html {
-    font-size: 42%;
+    font-size: 21.5%;
+  }
+}
+@media screen and (min-width: 260px) and (max-width: 281px) {
+  html {
+    font-size: 23.5%;
+  }
+  .new,
+  .clear {
+    padding: 3rem;
   }
   .selection {
-    width: 80%;
+    padding: 3rem 4rem;
+  }
+  .control-header {
+    h1 {
+      font-size: 2.6rem;
+    }
   }
 }
-@media screen and (min-width: 280px) and (max-width: 335px) {
+
+@media screen and (min-width: 282px) and (max-width: 290px) {
   html {
-    font-size: 44%;
+    font-size: 26.5%;
   }
-  .selection {
-    width: 90%;
+  .range {
+    input::-webkit-slider-runnable-track {
+      height: 4rem;
+    }
+    input::-moz-range-track {
+      height: 4rem;
+    }
+    input::-ms-track {
+      height: 4rem;
+    }
   }
 }
-@media screen and (min-width: 335px) and (max-width: 410px) {
+@media screen and (min-width: 291px) and (max-width: 305px) {
   html {
-    font-size: 49.5%;
-  }
-  .selection {
-    width: 70%;
+    font-size: 26.5%;
   }
 }
-@media screen and (max-width: 310px) {
-  #random-color-visual,
-  #custom-color-visual {
-    width: 1.5rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1030px) {
+@media screen and (min-width: 306px) and (max-width: 346px) {
   html {
-    font-size: 64%;
+    font-size: 29%;
   }
 }
-@media screen and (min-width: 1031px) {
+@media screen and (min-width: 347px) and (max-width: 386px) {
+  html {
+    font-size: 32.5%;
+  }
+}
+@media screen and (min-width: 387px) and (max-width: 450px) {
+  html {
+    font-size: 36.5%;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  html {
+    font-size: 43.5%;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 758px) {
+  html {
+    font-size: 50.5%;
+  }
+  .range {
+    input::-webkit-slider-runnable-track {
+      height: 2.5rem;
+    }
+    input::-moz-range-track {
+      height: 2.5rem;
+    }
+    input::-ms-track {
+      height: 2.5rem;
+    }
+  }
+}
+@media screen and (min-width: 834px) and (max-width: 877px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+@media screen and (min-width: 878px) {
   html {
     font-size: 62.5%;
   }
-  .logo {
-    img {
-      width: 35%;
+}
+
+@media screen and (min-width: 759px) and (max-width: 1023px) {
+  .range {
+    input::-webkit-slider-runnable-track {
+      height: 2rem;
     }
+    input::-moz-range-track {
+      height: 2rem;
+    }
+    input::-ms-track {
+      height: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1030px) {
+  html {
+    font-size: 56.5%;
+  }
+  .range {
+    input::-webkit-slider-runnable-track {
+      height: 2rem;
+    }
+    input::-moz-range-track {
+      height: 2rem;
+    }
+    input::-ms-track {
+      height: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 1031px) and (max-width: 1100px) {
+  html {
+    font-size: 55.5%;
   }
 }
